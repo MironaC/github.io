@@ -8,7 +8,7 @@ body {
 	min-height: 100vh;
 	/*Conteneur flex en colonne*/
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 }
 
 .global {
@@ -76,6 +76,8 @@ body {
 
 .content {
 	grid-area: content;
+	
+
 }
 
 .header {
@@ -89,6 +91,7 @@ body {
 .conteneur {
 	background-color: #fff;
 	color: #444;
+	background-color: #f0ece2;
 }
 /* conteneur est un élément flex et en même temps un conteneur grid */
 .conteneur {
@@ -179,8 +182,8 @@ body {
 }
 
 .box {
-	background-color: rgb(235, 225, 91);
-	color: rgb(250, 11, 11);
+	background-color: #c06c84;
+	color: rgb(0, 0, 0);
 	border-radius: 5px;
 	padding: 10px;
 	font-size: 150%;
@@ -188,7 +191,7 @@ body {
 
 .header,
 .footer {
-	background-color: #999;
+	
 }
 
 .sidebar2 {

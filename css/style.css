@@ -664,6 +664,8 @@ a:hover, a:active {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
+  margin-bottom: 0.5em;
+  border-radius: 2px;
 }
 
 /* À COMPLÉTER - Caractéristiques de chaque rectangle de l'intro...
@@ -678,25 +680,25 @@ a:hover, a:active {
 }
 
 .rectangle:nth-child(1) {
-  background-color: #70000f;
+  background-color: #acdbdf;
   -webkit-animation: anim1 0.5s;
           animation: anim1 0.5s;
 }
 
 .rectangle:nth-child(2) {
-  background-color: #f59723;
+  background-color: #c5d9db;
   -webkit-animation: anim2 0.5s 0.5s backwards;
           animation: anim2 0.5s 0.5s backwards;
 }
 
 .rectangle:nth-child(3) {
-  background-color: #58b34c;
+  background-color: #c5d9db;
   -webkit-animation: anim3 0.5s 1s backwards;
           animation: anim3 0.5s 1s backwards;
 }
 
 .rectangle:nth-child(4) {
-  background-color: #006d98;
+  background-color: #c06c84;
   font-size: 1em;
   /* max-height : 20vh;*/
   -webkit-animation: animGo 1s 1.5s backwards;
@@ -1008,6 +1010,7 @@ body {
 .conteneur {
   background-color: #fff;
   color: #444;
+  background-color: #f0ece2;
 }
 
 /* conteneur est un élément flex et en même temps un conteneur grid */
@@ -1096,20 +1099,108 @@ body {
 }
 
 .box {
-  background-color: #ebe15b;
-  color: #fa0b0b;
+  background-color: #c06c84;
+  color: black;
   border-radius: 5px;
   padding: 10px;
   font-size: 150%;
-}
-
-.header,
-.footer {
-  background-color: #999;
 }
 
 .sidebar2 {
   background-color: #006d98;
   color: #aaa;
 }
+
+/*--------------------------------------------------------------
+# global
+--------------------------------------------------------------*/
+/*---------------------------------------------------------------
+----------------------------------------------------------------*/
+body {
+  background: #101015;
+  overflow: hidden;
+}
+
+.ball {
+  left: 50%;
+  top: 50%;
+}
+
+.ball span {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  display: block;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  background: #ccc;
+  -webkit-box-shadow: 0px 0px 98px 0px black;
+          box-shadow: 0px 0px 98px 0px black;
+  -webkit-animation: ballsAnimationBigger 6s infinite linear;
+          animation: ballsAnimationBigger 6s infinite linear;
+}
+
+@-webkit-keyframes ballsAnimationBigger {
+  0% {
+    z-index: 100;
+    background: #CC2222;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+    background: #101015;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@keyframes ballsAnimationBigger {
+  0% {
+    z-index: 100;
+    background: #CC2222;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+    background: #101015;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.ball span:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.ball span:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.ball span:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.ball span:nth-child(5) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.ball span:nth-child(6) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+/*----------------------------------------------------------------*/
 /*# sourceMappingURL=style.css.map */
