@@ -9,6 +9,7 @@ body {
 	/*Conteneur flex en colonne*/
 	display: flex;
 	flex-direction: column;
+	font-family: 'Patrick Hand', cursive;
 }
 
 .global {
@@ -36,7 +37,7 @@ body {
 	}
 
 	.menu {
-		background-color : red;
+		background-color : #fb3569;
 		text-align: center;
 		/*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
 		width: 50vw;
@@ -89,9 +90,8 @@ body {
 }
 
 .conteneur {
-	background-color: #fff;
 	color: #444;
-	background-color: #f0ece2;
+	background-color: #fffde1;
 }
 /* conteneur est un élément flex et en même temps un conteneur grid */
 .conteneur {
@@ -149,7 +149,7 @@ body {
 		/*Propriété comme item flex - ne peut s'étirer en hauteur*/
 		width: 97vw;
 		margin-bottom: 10px;
-		border-radius : 10px;
+		border-radius : 2px;
 		flex: 0 0 100%;
 
 		/*Affichage du menu en rangée*/
@@ -182,7 +182,7 @@ body {
 }
 
 .box {
-	background-color: #c06c84;
+	background-color: #6C8EAD;
 	color: rgb(0, 0, 0);
 	border-radius: 5px;
 	padding: 10px;
@@ -197,4 +197,30 @@ body {
 .sidebar2 {
 	background-color: #006d98;
 	color: #aaa ;
+}
+
+h1{
+	color: #fffde1;
+	transform-origin: 50% 50%;
+	animation: rotate-scale-up 0.65s linear 3 both;
+	position: relative;
+	font-family: 'Coiny', cursive;
+}
+
+ @keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+
+.no1{
+	animation: animateCloud 35s linear infinite;
+	transform: scale(0.65);
 }
