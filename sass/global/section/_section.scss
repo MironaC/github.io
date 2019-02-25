@@ -1,56 +1,5 @@
 body{
-    background:#101015; 
+     background-color:  #ffeaec;
      overflow:hidden;
    }
    
-   .ball{
-     
-     left: 50%;
-     top: 50%;
-   }
-   
-   .ball span{
-     width: 0px;
-     height: 0px;
-     border-radius: 50%;
-     display: block;
-     transition: all 2s ease-in-out;
-     transform:translate(-50%,-50%);
-     position:absolute;
-     background: #ccc;
-     box-shadow:  0px 0px 98px 0px rgba(0,0,0,1);
-     animation: ballsAnimationBigger 6s infinite linear;
-   }
-   
-   @keyframes ballsAnimationBigger {
-     0% {
-       z-index:100;
-       background:#CC2222;
-     }
-     80%{
-       opacity:1;
-     }
-     100% {
-       opacity:0;
-       z-index:1;
-       background: #101015;
-       width: 400px;
-       height: 400px;
-     }
-   }
-   
-   .ball span:nth-child(2){
-     animation-delay: 1s;
-   }
-   .ball span:nth-child(3){
-     animation-delay: 2s;
-   }
-   .ball span:nth-child(4){
-     animation-delay: 3s;
-   }
-   .ball span:nth-child(5){
-     animation-delay: 4s;
-   }
-   .ball span:nth-child(6){
-     animation-delay: 5s;
-   }

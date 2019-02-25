@@ -23,6 +23,8 @@ body {
 	/*Effet de transition sur la transformation*/
 	transition: transform 1s;
 	/*	overflow-x: hidden; */
+
+	background-color: #A23E48;
 	}
 
 	.boutonBurger {
@@ -37,7 +39,7 @@ body {
 	}
 
 	.menu {
-		background-color : #fb3569;
+		background-color: #A23E48;
 		text-align: center;
 		/*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
 		width: 50vw;
@@ -182,7 +184,7 @@ body {
 }
 
 .box {
-	background-color: #6C8EAD;
+	background-color: #ffeaec;
 	color: rgb(0, 0, 0);
 	border-radius: 5px;
 	padding: 10px;
@@ -200,11 +202,16 @@ body {
 }
 
 h1{
-	color: #fffde1;
+	color: #6C8EAD;
 	transform-origin: 50% 50%;
 	animation: rotate-scale-up 0.65s linear 3 both;
 	position: relative;
 	font-family: 'Coiny', cursive;
+	z-index: 21;
+}
+
+h2{
+	color: #6C8EAD;
 }
 
  @keyframes rotate-scale-up {
@@ -219,8 +226,16 @@ h1{
   }
 }
 
-
-.no1{
-	animation: animateCloud 35s linear infinite;
-	transform: scale(0.65);
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-direction: column;
+	max-height: 100vh;
+}
+.cards img {
+	margin: 10px;
+	border: 3px solid #000;
+	box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+	max-width: 23vw;
 }

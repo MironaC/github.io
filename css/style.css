@@ -923,6 +923,7 @@ body {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
   /*	overflow-x: hidden; */
+  background-color: #A23E48;
 }
 
 .boutonBurger {
@@ -941,7 +942,7 @@ body {
 }
 
 .menu {
-  background-color: #fb3569;
+  background-color: #A23E48;
   text-align: center;
   /*Pour cet exemple, on fixe la largeur du menu à 100% ou 100vw*/
   width: 50vw;
@@ -1099,7 +1100,7 @@ body {
 }
 
 .box {
-  background-color: #6C8EAD;
+  background-color: #ffeaec;
   color: black;
   border-radius: 5px;
   padding: 10px;
@@ -1112,13 +1113,18 @@ body {
 }
 
 h1 {
-  color: #fffde1;
+  color: #6C8EAD;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation: rotate-scale-up 0.65s linear 3 both;
           animation: rotate-scale-up 0.65s linear 3 both;
   position: relative;
   font-family: 'Coiny', cursive;
+  z-index: 21;
+}
+
+h2 {
+  color: #6C8EAD;
 }
 
 @-webkit-keyframes rotate-scale-up {
@@ -1151,11 +1157,28 @@ h1 {
   }
 }
 
-.no1 {
-  -webkit-animation: animateCloud 35s linear infinite;
-          animation: animateCloud 35s linear infinite;
-  -webkit-transform: scale(0.65);
-          transform: scale(0.65);
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: 100vh;
+}
+
+.cards img {
+  margin: 10px;
+  border: 3px solid #000;
+  -webkit-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
+  max-width: 23vw;
 }
 
 /*--------------------------------------------------------------
@@ -1164,89 +1187,8 @@ h1 {
 /*---------------------------------------------------------------
 ----------------------------------------------------------------*/
 body {
-  background: #101015;
+  background-color: #ffeaec;
   overflow: hidden;
-}
-
-.ball {
-  left: 50%;
-  top: 50%;
-}
-
-.ball span {
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  display: block;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  background: #ccc;
-  -webkit-box-shadow: 0px 0px 98px 0px black;
-          box-shadow: 0px 0px 98px 0px black;
-  -webkit-animation: ballsAnimationBigger 6s infinite linear;
-          animation: ballsAnimationBigger 6s infinite linear;
-}
-
-@-webkit-keyframes ballsAnimationBigger {
-  0% {
-    z-index: 100;
-    background: #CC2222;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
-    background: #101015;
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@keyframes ballsAnimationBigger {
-  0% {
-    z-index: 100;
-    background: #CC2222;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
-    background: #101015;
-    width: 400px;
-    height: 400px;
-  }
-}
-
-.ball span:nth-child(2) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.ball span:nth-child(3) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.ball span:nth-child(4) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
-.ball span:nth-child(5) {
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-}
-
-.ball span:nth-child(6) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
 }
 
 /*----------------------------------------------------------------*/
