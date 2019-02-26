@@ -902,6 +902,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: 'Patrick Hand', cursive;
+  overflow: auto !important;
 }
 
 .global {
@@ -1113,7 +1114,7 @@ body {
 }
 
 h1 {
-  color: #6C8EAD;
+  color: #4b4b4b;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-animation: rotate-scale-up 0.65s linear 3 both;
@@ -1124,7 +1125,7 @@ h1 {
 }
 
 h2 {
-  color: #6C8EAD;
+  color: #4b4b4b;
 }
 
 @-webkit-keyframes rotate-scale-up {
@@ -1163,22 +1164,24 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cards img {
-  margin: 10px;
-  border: 3px solid #000;
-  -webkit-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
-  max-width: 23vw;
+  margin: 5px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.cards img:hover {
+  -webkit-transform: scale 1.1;
+          transform: scale 1.1;
+}
+
+aside {
+  font-size: 0.1em;
 }
 
 /*--------------------------------------------------------------
